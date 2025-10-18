@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/2-machine-learning-notes/model-overfitting/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/2-machine-learning-notes/model-overfitting/"}
 ---
 
 
@@ -15,6 +15,7 @@
 | ------------------- | ------------------------------------------------------------------------- | -------------- | ---------- |
 | 🔹 **Underfitting** | Model too simple; <span class="neon-highlight">fails to generalize</span> | ⬆️ High        | ⬆️ High    |
 | 🔸 **Overfitting**  | Model too complex; <span class="neon-highlight">memorizes data</span>     | ⬇️ Low         | ⬆️ High    |
+
 Fix overfitting: 
 1. simplify (less parameters)
 2. make a larger training data set (because then relatively it memorizes less)
