@@ -3,7 +3,7 @@
 ---
 
 ---
-# Quiz 1 - Machine Learning & Data Mining
+# Section 03
 
 ## Question 1
 **Fill in the blank:**
@@ -149,3 +149,172 @@ Identifying which Data Science-related courses students often enroll in right af
 
 > [!success]- Solution
 > Association Rule Mining
+
+
+---
+
+
+# Section 01
+
+---
+
+### **Q1**
+
+Determine whether the following activity is a machine learning and data mining task or not.  
+If it is a machine learning and data mining task, indicate if it uses classification, regression, clustering, or association rule mining.
+
+**Grouping students into two groups: females and males, using their student information available on Banner.**
+
+A. Clustering  
+B. Classification  
+C. Regression  
+D. Association Rule Mining  
+E. Not a machine learning or data mining task
+
+> [!success]- 💡 **Solution**  
+> ✅ **Classification**  
+> Because the groups (female, male) are **predefined labels** → this is a **supervised task**, not unsupervised clustering.
+
+---
+
+### **Q2**
+
+**True/False**  
+Semi-supervised learning can be used with regression tasks.
+
+> [!success]- 💡 **Solution**  
+> ❌ **False**  
+> Semi-supervised learning typically applies to **classification** problems where part of the data is labeled, not regression.
+
+---
+
+### **Q3**
+
+Which of the following is true:
+
+A. Machine Learning is broader than Artificial Intelligence.  
+B. **Deep Learning is a subset of Machine Learning.**  
+C. Artificial Intelligence is a subset of Deep Learning.  
+D. Data Mining and Machine Learning are identical.  
+E. All the above.
+
+> [!success]- 💡 **Solution**  
+> ✅ **B. Deep Learning is a subset of Machine Learning.**  
+> Deep learning is a specific type of machine learning based on neural networks.
+
+---
+
+### **Q4**
+
+Fill in the blank:  
+In _______ learning, the training data includes both inputs and known outputs.
+
+> [!success]- 💡 **Solution**  
+> ✅ **Supervised**  
+> Because supervised learning uses labeled data with both input features and target outputs.
+
+---
+
+### **Q5**
+
+**True/False**  
+Semi-supervised learning is particularly useful when labeled data is abundant, but unlabeled data is rare.
+
+> [!success]- 💡 **Solution**  
+> ❌ **False**  
+> Semi-supervised learning is useful when **labeled data is scarce** but **unlabeled data is abundant**.
+
+---
+
+### **Q6**
+
+Determine whether the following activity is a machine learning and data mining task or not.  
+If it is a machine learning and data mining task, indicate if it uses classification, regression, clustering, or association rule mining.
+
+**Grouping those who are satisfied with a purchase based on their reviews.**
+
+A. Clustering  
+B. Classification  
+C. Regression  
+D. Association Rule Mining  
+E. Not a machine learning or data mining task
+
+> [!success]- 💡 **Solution**  
+> ✅ **Classification**  
+> Because satisfaction (“satisfied” vs. “not satisfied”) is a **labeled** category → a supervised classification task.
+
+---
+
+### **Q7**
+
+Determine whether the following activity is a machine learning and data mining task or not.  
+If it is a machine learning and data mining task, indicate if it uses classification, regression, clustering, or association rule mining.
+
+**Monitoring the level of vibration and temperature of a machine and predicting if the machine will fail or not.**
+
+A. Clustering  
+B. Classification  
+C. Regression  
+D. Association Rule Mining  
+E. Not a machine learning or data mining task
+
+> [!success]- 💡 **Solution**  
+> ✅ **Classification**  
+> Because the output (“fail” or “not fail”) is a **binary label**, so it’s a **classification problem**, not regression.
+
+---
+
+### **Q8**
+
+Determine whether the following activity is a machine learning and data mining task or not.  
+If it is a machine learning and data mining task, indicate if it uses classification, regression, clustering, or association rule mining.
+
+**Grouping customers based on their purchasing patterns.**
+
+A. Clustering  
+B. Classification  
+C. Regression  
+D. Association Rule Mining  
+E. Not a machine learning or data mining task
+
+> [!success]- 💡 **Solution**  
+> ✅ **Clustering**  
+> Because we’re discovering natural **groups** in unlabeled data → **unsupervised learning**.
+
+---
+
+### **Q9**
+
+Determine whether the following activity is a machine learning and data mining task or not.  
+If it is a machine learning and data mining task, indicate if it uses classification, regression, clustering, or association rule mining.
+
+**Identifying which courses students often enroll in together to improve course offering planning.**
+
+A. Clustering  
+B. Classification  
+C. Regression  
+D. Association Rule Mining  
+E. Not a machine learning or data mining task
+
+> [!success]- 💡 **Solution**  
+> ✅ **Association Rule Mining**  
+> Because this discovers **relationships** or **co-occurrence patterns** between items (like “students who take X often take Y”).
+
+---
+
+### **Q10**
+
+Determine whether the following activity is a machine learning and data mining task or not.  
+If it is a machine learning and data mining task, indicate if it uses classification, regression, clustering, or association rule mining.
+
+**Estimating a future’s value of a building based on information about other buildings in the area.**
+
+A. Clustering  
+B. Classification  
+C. Regression  
+D. Association Rule Mining  
+E. Not a machine learning or data mining task
+
+> [!success]- 💡 **Solution**  
+> ✅ **Regression**  
+> Because the goal is to predict a **continuous numeric value** (building price/value).
