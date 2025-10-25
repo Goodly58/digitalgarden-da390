@@ -172,8 +172,8 @@ D. Association Rule Mining
 E. Not a machine learning or data mining task
 
 > [!success]- 💡 **Solution**  
-> ✅ **Classification**  
-> Because the groups (female, male) are **predefined labels** → this is a **supervised task**, not unsupervised clustering.
+> ✅ Not a machine learning or data mining task
+> the gender information is **already explicitly known** (it’s a field in the data). You're simply sorting.
 
 ---
 
@@ -183,8 +183,13 @@ E. Not a machine learning or data mining task
 Semi-supervised learning can be used with regression tasks.
 
 > [!success]- 💡 **Solution**  
-> ❌ **False**  
-> Semi-supervised learning typically applies to **classification** problems where part of the data is labeled, not regression.
+> ✅ **True**  
+> Suppose you want to predict house prices:
+>	- You have 500 houses with known prices (labeled).
+>     - You have 5,000 houses with features (size, location, rooms) but no prices (unlabeled).
+> A semi-supervised regression model can:
+> Use the labeled data to learn the mapping,
+> Use the unlabeled data to better understand the structure or distribution of the input space.
 
 ---
 
@@ -193,7 +198,7 @@ Semi-supervised learning can be used with regression tasks.
 Which of the following is true:
 
 A. Machine Learning is broader than Artificial Intelligence.  
-B. **Deep Learning is a subset of Machine Learning.**  
+B. Deep Learning is a subset of Machine Learning.  
 C. Artificial Intelligence is a subset of Deep Learning.  
 D. Data Mining and Machine Learning are identical.  
 E. All the above.
@@ -207,7 +212,7 @@ E. All the above.
 ### **Q4**
 
 Fill in the blank:  
-In _______ learning, the training data includes both inputs and known outputs.
+In \_\_\_\_\_\_\_ learning, the training data includes both inputs and known outputs.
 
 > [!success]- 💡 **Solution**  
 > ✅ **Supervised**  
