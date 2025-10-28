@@ -13,15 +13,26 @@ body {
 }
 
 
-/* Works on the site + overrides theme if needed */
-/* Rendered (Preview) */
-.markdown-rendered .gray-text {
-  color: var(--text-muted, #8a8a8a) !important;
+/* Rendered/Reading view */
+.markdown-rendered .gray-text,
+.markdown-reading-view .gray-text {
+  color: #888 !important; /* solid mid-gray */
 }
 
-/* Editor (legacy CM theme selector as requested) */
+/* Live Preview (CM6) */
+.markdown-source-view.mod-cm6 .gray-text {
+  color: #888 !important;
+}
+
+/* Legacy editor (CM5) — as you asked */
 .cm-s-obsidian span.gray-text {
-  color: var(--text-muted, #8a8a8a) !important;
+  color: #888 !important;
+}
+
+/* Optional: keep links/code inside gray too */
+.gray-text a,
+.gray-text code {
+  color: inherit !important;
 }
 
 
