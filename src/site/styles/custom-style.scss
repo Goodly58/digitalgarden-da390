@@ -14,8 +14,16 @@ body {
 
 
 /* Works on the site + overrides theme if needed */
-.markdown-rendered .gray-text { color: var(--text-faint); }
-.cm-s-obsidian span.gray-text { color: var(--text-faint); }
+/* Rendered (Preview) */
+.markdown-rendered .gray-text {
+  color: var(--text-muted, #8a8a8a) !important;
+}
+
+/* Editor (legacy CM theme selector as requested) */
+.cm-s-obsidian span.gray-text {
+  color: var(--text-muted, #8a8a8a) !important;
+}
+
 
 
 /* Neon highlight */
