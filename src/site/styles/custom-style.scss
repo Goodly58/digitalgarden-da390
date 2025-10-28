@@ -12,10 +12,6 @@ body {
     //  }
 }
 
-/* --- Digital Garden user snippets (combined) ---
-   Drop this file in: src/site/styles/user/dg-user-snippets.css
-   Any rules here load after the theme and will take precedence.
---------------------------------------------------------------- */
 
 /* Gray text (ported from Obsidian snippet) */
 .markdown-rendered .gray-text { color: var(--text-faint); }
