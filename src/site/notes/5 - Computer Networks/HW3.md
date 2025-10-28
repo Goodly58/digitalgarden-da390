@@ -432,12 +432,12 @@
     <span class="gray-text"></span>
 - <span class="gray-text">In an IPv4 datagram with a 36-byte header, the HEX representation of the first 8 bits in the header is __.</span>
     
-- The __ header field in an IPv4 datagram is used to prevent lost packets from staying inside the network indefinitely. Your answer must be an acronym
+<span class="neon-highlight">- The __ header field in an IPv4 datagram is used to prevent lost packets from staying inside the network indefinitely. Your answer must be an acronym</span>
 
 > [!success]- Solution
 > TTL
 
-- The \_\_ field in the header of an IPv4 datagram can be used to provide different classes of service inside the network.
+<span class="neon-highlight">- The \_\_ field in the header of an IPv4 datagram can be used to provide different classes of service inside the network.</span>
 
 > [!success]- Solution
 > TOS
@@ -576,27 +576,22 @@
 
 ### Subnetting: network & broadcast addresses
 
-- <span class="gray-text">Consider a LAN interface with the IPv4 address 188.165.250.245/20. The network address in this LAN is __.</span>
-    <span class="gray-text"></span>
-- <span class="gray-text">Consider a LAN interface with the IPv4 address 168.255.255.245/23. The network address in this LAN is __.</span>
-    <span class="gray-text"></span>
-- <span class="gray-text">Consider a LAN interface with the IPv4 address 125.125.175.3/29. The broadcast address in this LAN is __.</span>
-    <span class="gray-text"></span>
-- <span class="gray-text">Consider a LAN interface with the IPv4 address 33.60.150.1/28. The broadcast address in this LAN is __.</span>
-    <span class="gray-text"></span>
-- <span class="gray-text">Consider a LAN interface with the IPv4 address 60.33.12.1/15. The network address in this LAN is __.</span>
-    <span class="gray-text"></span>
-- <span class="gray-text">Consider a LAN interface with the IPv4 address 12.6.2.3/17. The network address in this LAN is __.</span>
-    <span class="gray-text"></span>
-- <span class="gray-text">Consider a LAN interface with the IPv4 address 12.6.128.25/19. The broadcast address in this LAN is __.</span>
-    
+<span class="neon-highlight">Consider a LAN interface with the IPv4 address 10.128.1.2/12. The last usable host address in this LAN is \_\_</span>
+
+> [!success]- Solution
+> 10.1000 0000
+> 255.1111
+> max = 1000 1111 = 143
+> 10.143.255.255 (broadcast)
+> **Therefore:
+> 10.143.255.254 (last usable host) **
 
 ### IPv4 fragmentation: counts & payload size
 
 - <span class="gray-text">A standard IPv4 datagram with a total length equal to 7800 bytes arrives at a router output port whose MTU is 940 bytes. The number of fragments leaving this router port is equal to __.</span>
     <span class="gray-text"></span>
-- <span class="gray-text">A standard IPv4 datagram with a total length equal to 12800 bytes arrives at a router output port whose MTU is 1220 bytes. The payload size of the last fragment leaving this router port is equal to __ bytes.</span>
-    <span class="gray-text"></span>
+<span class="neon-highlight">- A standard IPv4 datagram with a total length equal to 12800 bytes arrives at a router output port whose MTU is 1220 bytes. The payload size of the last fragment leaving this router port is equal to __ bytes.</span>
+
 - <span class="gray-text">A standard IPv4 datagram with a total length equal to 4800 bytes arrives to a router output port whose MTU is 820 bytes. The number of fragments leaving this router port is equal to __.</span>
     <span class="gray-text"></span>
 - <span class="gray-text">A standard IPv4 datagram with a total length equal to 7800 bytes arrives to a router output port whose MTU is 2940 bytes. The number of fragments leaving this router port is equal to __.</span>
