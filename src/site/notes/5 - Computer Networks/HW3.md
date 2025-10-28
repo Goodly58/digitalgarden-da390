@@ -31,7 +31,7 @@
 - In the SDN approach, remote controllers, instead of the routers, implement the __ plane functions.
 
 > [!success]- Solution
-> data
+> CP
 
 ### Router roles, architecture, and functions
 
@@ -229,7 +229,7 @@
 - __ algorithm is used by decentralized routing protocols. The nodes need not be aware of the entire network topology. They simply rely on updates from their immediate neighbors. Your answer must be an acronym.
 
 > [!success]- Solution
-> LS
+> DV
 
 - **__ is a two-node instability problem that networks running RIP protocol can suffer from. Your answer must be an acronym.**
 
@@ -261,7 +261,7 @@
 - A standard IPv4 datagram with a total length equal to 5800 bytes arrives to a router output port whose MTU is 1220 bytes. The number of fragments leaving this router port is equal to __.
 
 > [!success]- Solution
-> $\lceil5800/1220\rceil=\lceil4.75\rceil$=5 fragments
+> $\lceil(5800-20)/(1220-20)\rceil=\lceil4.81\rceil$=5 fragments
 > 
 
 - <span class="gray-text">A standard IPv4 datagram with a total length equal to 4800 bytes arrives to a router output port whose MTU is 660 bytes. The number of fragments leaving this router port is equal to __.</span>
@@ -281,7 +281,7 @@
 - Consider a LAN interface with the IPv4 address 188.165.250.245/19. The network address in this LAN is \_\_.
 
 > [!success]- Solution
-> 188.165.208.0
+> 188.165.224.0
 
 - <span class="gray-text">Consider a LAN interface with the IPv4 address 125.125.175.3/18. The network address in this LAN is __.</span>
     
@@ -313,9 +313,9 @@
 
 > [!success]- Solution
 > $\frac{10^7}{10x10^3kbps} = 10^3 = 1000$ bandwidth
-> $D=T_{tot}/10=\frac{10}{10}=1$
+> $D=T_{tot}/10=\frac{10,000 (microseconds)}{10}=1000$ delay
 > If he asked for M
-> $M=256(B+D) = 256(1000+1)=256256$
+> $M=256(B+D) = 256(1000+1000)=512000$
 
 - <span class="gray-text">A network path, composed of many links, has a minimum bit rate of 10 Mbps and a total delay of 6 milliseconds. Compute the EIGRP bandwidth and delay metrics for this path.  </span>
     <span class="gray-text">• EIGRP bandwidth metric is __.  </span>
