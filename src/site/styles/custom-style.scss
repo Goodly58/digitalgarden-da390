@@ -18,13 +18,11 @@ body {
 --------------------------------------------------------------- */
 
 /* Gray text (ported from Obsidian snippet) */
-.gray-text {
-  /* Use site variable if present; fall back to a reasonable gray */
-  color: var(--text-faint, var(--text-muted, #6b7280));
-}
+.markdown-rendered .gray-text { color: var(--text-faint); }
+.cm-s-obsidian span.gray-text { color: var(--text-faint); }
 
-/* Neon highlight (ported as-is) */
-.neon-highlight {
+/* Neon highlight */
+span.neon-highlight {
   background: linear-gradient(90deg, #ff00cc, #3333ff);
   color: white;
   padding: 2px 4px;
@@ -32,7 +30,3 @@ body {
   font-weight: 500;
   text-shadow: 0 0 4px rgba(255,255,255,0.8);
 }
-
-/* Optional: make the highlight behave nicely inside code/links */
-a .neon-highlight { text-decoration: none; }
-code .neon-highlight { padding: 0 4px; border-radius: 3px; }
