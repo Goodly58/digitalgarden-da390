@@ -16,20 +16,20 @@ body {
 /* Rendered/Reading view */
 .markdown-rendered .gray-text,
 .markdown-reading-view .gray-text {
-  color: #888 !important; /* solid mid-gray */
+  color: #c7c7c7 !important;
 }
 
 /* Live Preview (CM6) */
 .markdown-source-view.mod-cm6 .gray-text {
-  color: #888 !important;
+  color: #c7c7c7 !important;
 }
 
-/* Legacy editor (CM5) — as you asked */
+/* Legacy editor (CM5) */
 .cm-s-obsidian span.gray-text {
-  color: #888 !important;
+  color: #c7c7c7 !important;
 }
 
-/* Optional: keep links/code inside gray too */
+/* Keep links/code inside gray too */
 .gray-text a,
 .gray-text code {
   color: inherit !important;
