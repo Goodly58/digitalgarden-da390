@@ -5,7 +5,7 @@
 
 ### Network layer & service model
 
-- <span class="gray-text">The network layer that follows the __ service model gives a best-effort, connectionless service to the transport layer.</span>
+- The network layer that follows the __ service model gives a best-effort, connectionless service to the transport layer.
 
 > [!success]- Solution
 > Datagram
