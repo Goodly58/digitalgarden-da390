@@ -13,9 +13,11 @@ body {
 }
 
 
-/* Gray text (ported from Obsidian snippet) */
-.markdown-rendered .gray-text { color: var(--text-faint); }
-.cm-s-obsidian span.gray-text { color: var(--text-faint); }
+/* Works on the site + overrides theme if needed */
+body .gray-text {
+  color: var(--text-muted, #9ea5b5) !important; /* fallback ensures not blue */
+}
+
 
 /* Neon highlight */
 span.neon-highlight {
