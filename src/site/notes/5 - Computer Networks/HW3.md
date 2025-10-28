@@ -77,7 +77,7 @@
 > [!success]- Solution
 > 0
     
-- The __ flag in the header of an IPv4 datagram is set to 1 if the datagram is not to be fragmented.
+- The __ flag in the header of an IPv4 datagram is set to 1 if the datagram is not to be fragmented. 
 
 > [!success]- Solution
 > D
