@@ -576,7 +576,7 @@
 
 ### Subnetting: network & broadcast addresses
 
-<span class="neon-highlight">Consider a LAN interface with the IPv4 address 10.128.1.2/12. The last usable host address in this LAN is \_\_</span>
+<span class="neon-highlight">Consider a LAN interface with the IPv4 address 10.128.1.2/12. The last usable host address in this LAN is __</span>
 
 > [!success]- Solution
 > 10.1000 0000
