@@ -13,28 +13,53 @@ body {
 }
 
 
+body {
+    /***
+      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
+      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
+   ***/
+    //  background-color: white;
+    //  .content {
+    //   font-size: 14px;
+    //  }
+    //  h1 {
+    //   color: black;
+    //  }
+}
+
+
 /* Rendered/Reading view */
 .markdown-rendered .gray-text,
 .markdown-reading-view .gray-text {
-  color: #c7c7c7 !important;
+  color: #888 !important; /* solid mid-gray */
 }
 
 /* Live Preview (CM6) */
 .markdown-source-view.mod-cm6 .gray-text {
-  color: #c7c7c7 !important;
+  color: #888 !important;
 }
 
-/* Legacy editor (CM5) */
+/* Legacy editor (CM5) — as you asked */
 .cm-s-obsidian span.gray-text {
-  color: #c7c7c7 !important;
+  color: #888 !important;
 }
 
-/* Keep links/code inside gray too */
+/* Optional: keep links/code inside gray too */
 .gray-text a,
 .gray-text code {
   color: inherit !important;
 }
 
+
+/* Neon highlight */
+span.neon-highlight {
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-shadow: 0 0 4px rgba(255,255,255,0.8);
+}
 
 
 /* Neon highlight */
