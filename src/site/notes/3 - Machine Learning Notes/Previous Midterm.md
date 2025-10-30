@@ -21,9 +21,6 @@
 > | random_state     | **No effect**<br>Having a random estimator does not increase or decrease the likelihood of data being overfitted, this is because the tree size (or number of branches) is not affected                                                                         |
 > 
 
-
-
-
 ![Q3_aligned_upright_v2.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/Q3_aligned_upright_v2.png)
 
 > [!success]- Solution
@@ -31,8 +28,27 @@
 
 ![Q4_aligned_upright.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/Q4_aligned_upright.png)
 
-
+> [!success]- Solution
+> 
+> | Model                    | Results will vary? | Reason                                                                                                                                                                                                                                                                                                                                               |
+> | ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> | KNN                      | Yes                | KNN needs to apply normalization here as otherwise data with bigger ranges (ex. annual income) will dominate smaller ranges (ex. age). Therefore, there will be a difference in value as experiment 1 will consider age, while experiment 2 age's effect will be minimal (as it will be overshadowed by annual income).                              |
+> | Decision Tree Classifier | No                 | No because the deciding splits (and thus the resulting tree) would **not change**. This is because the tree is built depending on the order of values (_order of values is still the same: `22 < 25 < 35 < 50` → `0.0 < 0.08 < 0.33 < 0.78`_), impurity formulas, and error estimates, rather than the specific values of the attributes themselves. |
+> | Decision Tree Regressor  | No                 | Similar reason to decision tree classifier. Rescaling doesn’t alter which samples fall left/right at each split, so predictions remain identical                                                                                                                                                                                                     |
+> | Naive Bayes              | No                 | Naive bayes handles noise and differences in the range of attributes well (since it looks at probability), so the results will not vary significantly.                                                                                                                                                                                               |
+> 
 
 ![aligned_1_upright.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/aligned_1_upright.png)
 
+> [!success]- Solution
+> 
+> | Dataset     | Suitable? | Why?                                                                                                                                                                                                                                                        |
+> | ----------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> | KNN         | No        | KNN is not suitable because it must store the entire dataset and compute distances to every record when predicting. With a very large dataset, both the memory requirement and distance computations (O(Nd)) become impractical.                            |
+> | Naive Bayes | Yes       | Naive Bayes is suitable because it only stores a few summary statistics (class priors, means, variances, or counts) instead of the entire dataset. These can be computed in a single pass, making it memory-efficient and scalable for very large datasets. |
+> 
+
 ![aligned_2_upright.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/aligned_2_upright.png)
+
+> [!success]- Solution
+> ![image-33.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-33.png)
