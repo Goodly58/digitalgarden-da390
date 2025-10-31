@@ -2,6 +2,10 @@
 {"dg-publish":true,"permalink":"/3-machine-learning-notes/quiz-1-intro-to-ml/","tags":["quiz","machine-learning","data-mining"]}
 ---
 
+Quiz 1: https://tkbs.netlify.app/3-machine-learning-notes/quiz-1-intro-to-ml/
+Quiz 2: https://tkbs.netlify.app/3-machine-learning-notes/quiz-2-data/
+Quiz 3: https://tkbs.netlify.app/3-machine-learning-notes/quiz-3-kn-ns/
+
 ---
 # Section 03
 
@@ -323,3 +327,178 @@ E. Not a machine learning or data mining task
 > [!success]- 💡 **Solution**  
 > ✅ **Regression**  
 > Because the goal is to predict a **continuous numeric value** (building price/value).
+
+---
+
+# Section 2
+
+---
+
+### **Question 1**
+
+**Multiple Choice**  
+Which of the following is true:
+- Machine Learning is broader than Artificial Intelligence
+- Machine Learning is a subset of Deep Learning
+- Artificial Intelligence (AI) only refers to robots that mimic human behavior
+- Data Mining and Machine Learning are identical
+- All the above
+    
+
+> [!success]- Solution  
+> None of the above
+
+---
+
+### **Question 2**
+
+**Fill in the Blank**  
+Fill in the blank:  
+In \_\_\_\_\_\_\_\_\_\_\_\_\_ learning, the training data includes input data without labels.
+
+> [!success]- Solution  
+> unsupervised
+
+---
+
+### **Question 3**
+
+**Multiple Choice**  
+Classify students into several groups based on their available GPA.
+
+- Classification
+- Regression
+- Clustering
+- Association Rule Mining
+- Not a machine learning or data mining task
+    
+
+> [!success]- Solution  
+> Clustering
+
+---
+
+### **Question 4**
+
+**True/False**  
+Association rule mining can be considered a supervised learning method.
+
+> [!success]- Solution  
+> False
+
+---
+
+### **Question 5**
+
+**Multiple Choice**  
+Categorize households based on energy usage patterns to identify typical consumption behaviors.
+
+- Classification
+    
+- Regression
+    
+- Clustering
+    
+- Association Rule Mining
+    
+- Not a machine learning or data mining task
+    
+
+> [!success]- Solution  
+> Clustering
+
+---
+
+### **Question 6**
+
+**Multiple Choice**  
+Predicting if a student taking CMP 466 will pass or fail based on their grades.
+
+- Clustering
+    
+- Classification
+    
+- Regression
+    
+- Association Rule Mining
+    
+- Not a machine learning or data mining task
+    
+
+> [!success]- Solution  
+> Classification
+
+---
+
+### **Question 7**
+
+**Multiple Choice**  
+Identifying which Data Science-related courses students often enroll in right after completing "Python for Beginners" course.
+
+- Clustering
+    
+- Classification
+    
+- Regression
+    
+- Association Rule Mining
+    
+- Not a machine learning or data mining task
+    
+
+> [!success]- Solution  
+> Association Rule Mining
+
+---
+
+### **Question 8**
+
+**Multiple Choice**  
+Predicting a patient’s cholesterol level in the next check-up based on diet, medication, and exercise history.
+
+- Clustering
+    
+- Classification
+    
+- Regression
+    
+- Association Rule Mining
+    
+- Not a machine learning or data mining task
+    
+
+> [!success]- Solution  
+> Regression
+
+---
+
+### **Question 9**
+
+**True/False**  
+Semi-supervised learning is particularly useful when unlabeled data is abundant, but labeled data is rare.
+
+> [!success]- Solution  
+> True
+
+---
+
+### **Question 10**
+
+**Multiple Choice**  
+Predicting if a comment is positive, negative, or neutral.
+
+- Clustering
+    
+- Classification
+    
+- Regression
+    
+- Association Rule Mining
+    
+- Not a machine learning or data mining task
+    
+
+> [!success]- Solution  
+> Classification
+
+---
