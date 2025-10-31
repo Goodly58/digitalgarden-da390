@@ -2,6 +2,11 @@
 {"dg-publish":true,"permalink":"/3-machine-learning-notes/quiz-3-kn-ns/"}
 ---
 
+Quiz 1: https://tkbs.netlify.app/3-machine-learning-notes/quiz-1-intro-to-ml/
+Quiz 2: https://tkbs.netlify.app/3-machine-learning-notes/quiz-2-data/
+Quiz 3: https://tkbs.netlify.app/3-machine-learning-notes/quiz-3-kn-ns/
+
+---
 # Section 01
 
 ### **Question 1**
