@@ -2,9 +2,18 @@
 {"dg-publish":true,"permalink":"/3-machine-learning-notes/quiz-2-data/"}
 ---
 
-Quiz 1: https://tkbs.netlify.app/3-machine-learning-notes/quiz-1-intro-to-ml/
-Quiz 2: https://tkbs.netlify.app/3-machine-learning-notes/quiz-2-data/
-Quiz 3: https://tkbs.netlify.app/3-machine-learning-notes/quiz-3-kn-ns/
+
+<div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/3-machine-learning-notes/quiz-1-intro-to-ml/#mlquizzes" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
+
+
+
+Quiz 1: https://tkbs.netlify.app/3-machine-learning-notes/quiz-1-intro-to-ml/  
+Quiz 2: https://tkbs.netlify.app/3-machine-learning-notes/quiz-2-data/  
+Quiz 3: https://tkbs.netlify.app/3-machine-learning-notes/quiz-3-kn-ns/  
+
+
+</div></div>
+
 
 ---
 # Section 03
@@ -13,7 +22,6 @@ Quiz 3: https://tkbs.netlify.app/3-machine-learning-notes/quiz-3-kn-ns/
 ### **Question 1**
 
 What would be the resulting array after running the following code?
-
 ```python
 #Impute:
 import numpy as np
@@ -177,7 +185,7 @@ You provided the following dataset and asked to show the table after aggregation
 </table>
 
 
-**Task:** Aggregate scores per student across the three terms to compute the **average annual score for each subject**.
+**Task:** Aggregate scores per student across the three terms to compute the average annual score for each subject.
 
 **Question:** Show how the table would look after this aggregation.
 
@@ -368,10 +376,6 @@ What is the **one-hot encoded** version?
 
 ---
 
-## **Quiz 2**
-
----
-
 ### **Question 1**
 
 **Multiple Choice**  
@@ -391,14 +395,20 @@ enc.fit_transform(X2).toarray()
 ```
 
 Options:
-
-```
+```python
+A
 [[1., 0., 0., 1., 0., 1.],
  [1., 0., 0., 1., 0., 1.]]
+
+B
 [[1., 0., 0., 1., 0., 1.],
  [0., 1., 1., 0., 0., 1.]]
+
+C
 [[1., 0., 0., 1., 0., 1.],
  [0., 1., 1., 0., 1., 0.]]
+
+D
 [[0., 1., 1., 0., 1., 0.],
  [1., 0., 0., 1., 0., 1.]]
 ```
@@ -432,21 +442,23 @@ X_new
 ```
 
 Options:
-
-```
+```python
 [[nan, 8],
  [4, nan],
  [6, 10]]
+ 
 [[ 0., 8.],
  [ 4., 0.],
  [ 6., 10.]]
+ 
 [[ 4., 8.],
  [ 4., 8.],
  [ 6., 10.]]
+ 
 [[ 5., 8.],
  [ 4., 9.],
  [ 6., 10.]]
-```
+ ```
 
 > [!success]- Solution
 > 
@@ -460,19 +472,14 @@ Options:
 
 ### **Question 3**
 
+
 **Fill in the Blank**  
 The formula for **Min-Max Scaling** is:
-
+$$X_{scaled} = \frac{X - X_{min}}{X_{max} - X_{min}}$$
 Where:
-
-- ( x ) is the original value
-    
-- ( x_{min} ) is the minimum value of the feature
-    
-- ( x_{max} ) is the maximum value of the feature
-    
-
-The resulting array is: `[[0.444, 0], [0, 0.5], [1, 1]]`
+- ( $x$ ) is the original value
+- ( $x_{min}$ ) is the minimum value of the feature
+- ( $x_{max}$ ) is the maximum value of the feature
 
 > [!success]- Solution  
 > `[[0.4, 0.], [0., 0.5], [1., 1.]]`
@@ -498,20 +505,22 @@ Xt
 ```
 
 Options:
-
-```
+```python
 [[1., 0.],
  [1., 0.],
  [0., 1.],
  [0., 1.]]
+ 
 [[0., 0.],
  [1., 0.],
  [0., 1.],
  [1., 1.]]
+ 
 [[1., 0.],
  [0., 0.],
  [1., 1.],
  [0., 1.]]
+ 
 [[0., 0.],
  [0., 0.],
  [1., 1.],
@@ -535,31 +544,28 @@ Options:
 You are working with a dataset containing daily sales data from 100 retail stores across multiple cities in the UAE.  
 The dataset contains the following attributes:
 
-|Date|Store_ID|City|Product_ID|Units_Sold|Revenue (AED)|
-|---|---|---|---|---|---|
-|2023-Jan-01|101|Dubai|A123|10|150.00|
-|2023-Feb-02|101|Dubai|B234|5|80.00|
-|2023-Jan-01|102|Abu Dhabi|B234|12|180.00|
-|2023-Jan-03|102|Abu Dhabi|A123|6|90.00|
-|2023-Aug-01|103|Sharjah|C345|7|105.00|
-|2023-July-04|103|Sharjah|B234|5|75.00|
+| Date         | Store_ID | City      | Product_ID | Units_Sold | Revenue (AED) |
+| ------------ | -------- | --------- | ---------- | ---------- | ------------- |
+| 2023-Jan-01  | 101      | Dubai     | A123       | 10         | 150.00        |
+| 2023-Feb-02  | 101      | Dubai     | B234       | 5          | 80.00         |
+| 2023-Jan-01  | 102      | Abu Dhabi | B234       | 12         | 180.00        |
+| 2023-Jan-03  | 102      | Abu Dhabi | A123       | 6          | 90.00         |
+| 2023-Aug-01  | 103      | Sharjah   | C345       | 7          | 105.00        |
+| 2023-July-04 | 103      | Sharjah   | B234       | 5          | 75.00         |
 
 You are asked to **aggregate the dataset to reduce granularity** and prepare it for higher-level trend analysis.  
 **Task:**
 - Group by `Store_ID` and the **month** extracted from `Date`.
 - Compute total `Units_Sold` and total `Revenue` for each store per month.
 - Show how the data would look after aggregation.
-    
 
-> [!success]- Solution  
-> **Aggregated Table:**
-> 
-> |Month|Store_ID|Units_Sold|Revenue (AED)|
-> |---|---|---|---|
-> |2023-Jan|101|10|150|
-> |2023-Feb|101|5|80|
-> |2023-Jan|102|18|270|
-> |2023-Aug|103|7|105|
-> |2023-July|103|5|75|
+> [!success]- Solution
+> | Date      | Store_ID | City      | Units_Sold | Revenue (AED) |
+| --------- | -------- | --------- | ---------- | ------------- |
+| 2023-Jan  | 101      | Dubai     | 10         | 150.00        |
+| 2023-Feb  | 101      | Dubai     | 5          | 80.00         |
+| 2023-Jan  | 102      | Abu Dhabi | 18         | 270           |
+| 2023-Aug  | 103      | Sharjah   | 7          | 105.00        |
+| 2023-July | 103      | Sharjah   | 5          | 75.00         |
 
 ---
