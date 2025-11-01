@@ -259,6 +259,7 @@ What is the Min-Max-scaled version of this matrix?
 > 
 > **Reasoning:**  
 > $X_{min}=25,\ X_{max}=50$  
+> 
 
 ---
 
