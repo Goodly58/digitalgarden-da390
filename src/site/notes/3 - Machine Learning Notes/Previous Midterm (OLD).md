@@ -16,7 +16,8 @@
 8. Extracting the frequencies of a sound wave.
 
 > [!success]- Solution
-> 1. 
+> ![image-56.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-56.png)
+> ![image-52.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-52.png)
 
 **Question 2. Data**
 [7 points] Classify the following attributes as **discrete or continuous**. Also, classify them as **Categorical (nominal or ordinal)** or **Numerical (interval or ratio)**. Some cases may have more than one interpretation, so briefly indicate your reasoning if you think there may be some ambiguity.
@@ -31,9 +32,17 @@ _Example:_ Age in years. _Answer:_ Discrete, numerical (ratio)
 6. Ability to pass light in terms of the following values: opaque, translucent, transparent.
 7. Bag check number. (When you attend an event, you can often give your bag to someone who, in turn, gives you a number that you can use to claim your bag when you leave.)
 
+> [!success]- Solution
+> ![image-57.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-57.png)
+> ![image-53.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-53.png)
 
 ![image-36.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-36.png)
 
+![image-58.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-58.png)
+
+> [!success]- Solution
+> ![image-59.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-59.png)
+> ![image-54.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-54.png)
 
 ### Midterm 2020
 
@@ -46,17 +55,17 @@ _Example:_ Age in years. _Answer:_ Discrete, numerical (ratio)
 a. Given the above plot of training and testing error, is the decision tree overfitted when the size of the decision tree is 15 nodes? Explain why or why not?
 
 > [!success]- Solution
-> Overfitted,  because the testing error increases and the decreases on the number of nodes
+> Yes, because it having more errors than when the tree size was 7,8,9,10, while the training data's error rate is lowering (this divergence signals overfitting). While it is not as overfitted as when it approaches 20,21, it still shows a significant degree of overfitting.
 
 b. Given the above plot of training and testing error, what is the ideal number of nodes to use to classify future examples? Why?
 
 > [!success]- Solution
-> 9, because the testing error and training are the same, and it has the lowest number of nodes therefore, the tree is less complex.
+> b) The ideal would be likely be 10 as it has the lowest overfitting and best performance for testing set (which is the dataset that matters more).
 
 c. Is decision trees classifier a parametric or non-parametric method? Why?
 
 > [!success]- Solution
-> Non-parametric, because its not using the max number of nodes
+> Non-parametric, because it doesn't have a fixed form (like linear y=mx+b)
 
 
 **Question 4. Evaluation Measures _(7 points)_**
@@ -69,32 +78,41 @@ A team from AUS proposed a method to predict whether an email is Spam or Not Spa
 | **True: Not Spam** | 160                 | 660                     |
 
 **a.** Compute the **accuracy** of this model.
-
-> [!success]- Solution  
-> Accuracy (=\frac{TP+TN}{N}=\frac{140+660}{1000}=0.80=80%).
-
 **b.** In this particular case, do you think that **accuracy is a good measure** of predicting Spam or Not Spam email? Why or why not? _(briefly justify your answer)_
-
-> [!success]- Solution  
-> **No.** The classes are **imbalanced** and accuracy **hides the trade-off** between false positives and false negatives; precision/recall are more informative.
-
 **c.** Compute the **precision and recall** of this model in predicting **Spam** emails.
-
-> [!success]- Solution  
-> Precision (=\frac{TP}{TP+FP}=\frac{140}{140+160}=0.4667=46.67%).  
-> Recall (=\frac{TP}{TP+FN}=\frac{140}{140+40}=0.7778=77.78%).
-
 **d.** What type of users would this classifier more likely **satisfy**? Why? _(briefly justify your answer)_
 
 > [!success]- Solution  
-> Users who **prioritize catching spam** (high **recall**) and **accept more false positives**—i.e., they prefer a cleaner inbox and don’t mind checking the spam folder for mistakenly filtered legitimate emails (low precision).
+> ![image-61.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-61.png)
 
 
-
-(???)
-![image-38.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-38.png)
-
-
----
-Increase overfitting, decrease, or no effect:
+**Overfitting:** Increase, decrease, or no effect:
 ![image-40.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-40.png)
+
+> [!success]- Solution
+> ![image-62.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-62.png)
+
+
+
+**Question 2. Classification using KNN**
+
+[6 points] As you know, KNN classifier assigns a test sample the majority class associated with its K nearest training instances. Suppose we have the following training set of positive (+) and negative (-) samples and a single test sample (o). All samples have two real-valued features (X and Y). Euclidean distance is considered to measure the distance between samples. Assume that we are using the majority “unweighted” KNN (every nearest neighbor contributes equally to the final majority vote). Answer the following questions:
+
+a. What would be the class assigned to this test sample for K=1  
+
+b. What would be the class assigned to this test sample for K=5
+
+c. If the data you have contains noise samples, which of the following options would you consider in KNN to get better predictions? and Why? (briefly justify your answer in 1 or 2 sentences)  
+A) increase the value of k  
+B) decrease the value of k  
+C) noise cannot affect the value of k  
+D) none of these  
+Reason?
+
+d. Given this particular training dataset, would you recommend setting K = 11 or more? Why or why not? (briefly justify your answer in 1 or 2 sentences)
+
+
+![image-63.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-63.png)
+
+> [!success]- Solution
+> ![image-64.png](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-64.png)
