@@ -3,6 +3,11 @@
 ---
 
 
+![image-7.png|400](/img/user/4%20-%20Web%20app/img/image-7.png)
+
+> [!success]- Solution
+> Child show()
+
 ### **Question 2**
 
 What is the output?
@@ -129,9 +134,10 @@ public class Test {
 > ```
 > 
 > The `catch` block handles the error, and the `finally` block **always executes**.
+> <span class="neon-highlight">This is a compile time error</span>
 
 > [!success]- What if we changed 5 / 0 → a / b (where a=5,b=0)
-> Runtime error
+> “It still throws an `ArithmeticException` at **runtime**, but the `catch` handles it. Without the try–catch, it would be a runtime error that crashes the program.”
 
 ---
 
@@ -322,8 +328,7 @@ public class Main {
     public static void main(String[] args) {
         Pet[] pets = { new Dog(), new Cat() };
         for (Pet p : pets) {
-            if (p instanceof Cat)
-                ((Dog)p).bark();
+	        ((Dog)p).bark();
         }
         System.out.println("Done");
     }
@@ -533,11 +538,11 @@ public class Main {
 
 > [!success]- Solution
 > 18
-
-> [!success]- What is the keywords Java assigns to the attribute of Consts?
-> `Public` → accessible from anywhere
-> `Static` → belong to interface itself, not object
-> `Final` → constant, cannot be changed
+>
+> > [!success]- What is the keywords Java assigns to the attribute of Consts?
+> > `Public` → accessible from anywhere
+> > `Static` → belong to interface itself, not object
+> > `Final` → constant, cannot be changed
 
 ---
 
@@ -609,10 +614,6 @@ public class WriteFile {
 > The code intends to write a single character into a file. What’s missing?
 
 > [!success]- Solution
-> 
-> - Must **import** required classes:  
->     `import java.io.*;`
->     
 > - Must **handle exception** using `try-catch` or `throws IOException`.
 >     
 > - Must **close the stream** after writing: `out.close();`
@@ -643,6 +644,7 @@ public class WriteData {
 > ```java
 > out.close();
 > ```
+> We didn't need to do try catch cause we used "throws IOException"
 
 ---
 
@@ -663,6 +665,7 @@ System.out.println("Written successfully");
 > 
 > - Must handle or declare the **checked exception** (`IOException`).  
 >     Either wrap in `try-catch(IOException e)` or add `throws IOException` to the method.
+> - `fout.close()`
 >     
 
 ---
@@ -851,13 +854,6 @@ catch(Exception e) {
 > }
 > ```
 > 
-> or use Java 7+ try-with-resources:
-> 
-> ```java
-> try (FileInputStream fin = new FileInputStream("data.txt")) {
->     ...
-> }
-> ```
 
 > [!success]- What counts as opening the file?
 > ![image-5.png](/img/user/4%20-%20Web%20app/img/image-5.png)
@@ -882,6 +878,8 @@ out.write("Hi".getBytes());
 > ```java
 > try { ... } catch (FileNotFoundException e) { ... }
 > ```
+>
+> also .close() is missing 
 
 ---
 
@@ -904,8 +902,7 @@ catch (IOException e) {
 > What’s missing if this should use _character-based streams correctly_?
 
 > [!success]- Solution  
-> Must **close the reader** in `finally` (or use try-with-resources).  
-> Also, may need **`import java.io.*;`**.
+> Must **close the reader**
 
 ---
 
@@ -932,29 +929,7 @@ fout.close();
 ---
 
 
-### **Q13**
-
-```java
-try {
-    FileOutputStream fout = new FileOutputStream("file.txt");
-    fout.write(65);
-    fout.flush();
-}
-catch(IOException e) {
-    System.out.println("Error");
-}
-```
-
-> [!question]  
-> The file sometimes doesn’t contain data after program ends. What’s missing?
-
-> [!success]- Solution  
-> Must **close the stream** after flushing:
-> 
-> ```java
-> fout.close();
-> ```
-
+> [!note]
 
 <table>
   <thead>
