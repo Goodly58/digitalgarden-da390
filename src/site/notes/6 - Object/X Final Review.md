@@ -97,11 +97,11 @@ High cohesion: single responsibility delegating the math calculation to calculat
 | **Data driven systems** | Uses data to choose or suggest actions | Recommender   |
 
 
-<span class="neon-highlight">Diagrams</span>
+<span class="neon-highlight">UML Diagrams</span>
 The SmartMed+ Remote Patient Monitoring System is a cloud-based healthcare solution developed to enable doctors to remotely monitor patients’ vital signs and respond quickly to emergencies. Each patient wears a SmartMed wearable device that continuously measures key health metrics such as heart rate, body temperature, and glucose levels. This device communicates via Bluetooth with a Mobile Gateway, typically the patient’s smartphone running the SmartMed Mobile App. The app encrypts and transmits the collected data through HTTPS to the Cloud Health Server, which hosts the SmartMed+ application and provides core functionalities such as health data storage, AI-driven anomaly detection, and alert notifications. The Cloud Server connects to a Database Server through a JDBC connection to store patient records, system logs, and doctor feedback. Doctors access the system through their Workstations or browser-based interfaces linked to the Cloud Server, while a System Administrator operates through an Admin Console Node to configure accounts, maintain data security, and monitor network operations.
 
 *Tasks*
-**Deployment Diagram**
+**Deployment Diagram** (architectural diagram)
 Construct a Deployment Diagram illustrating all physical nodes and software artifacts in the SmartMed+ system. Include the SmartMed Device, Mobile Gateway, Cloud Health Server, Database Server, Doctor Workstation, and Admin Console Node. Clearly indicate the communication protocols (e.g., Bluetooth, HTTPS, JDBC) and deployment of artifacts such as SmartMed.apk, HealthAnalytics.jar, and PatientDB. Represent the logical relationships and communication links between all nodes.
 
 **Communication Diagram**
@@ -114,6 +114,9 @@ Develop a Sequence Diagram for the same use case, showing the chronological flow
 > ![image-24.png|400x381](/img/user/6%20-%20Object/img/image-24.png)
 > ![image-25.png|400x207](/img/user/6%20-%20Object/img/image-25.png)
 > ![image-26.png|400x192](/img/user/6%20-%20Object/img/image-26.png)
+
+<span class="neon-highlight">Architectural Diagram</span>
+**Deployment Diagram**
 
 **Component Diagram**
 ![image-43.png|300](/img/user/6%20-%20Object/img/image-43.png)
@@ -231,8 +234,11 @@ Mapping input → output
 
 ![unnamed-1.jpg|3 types of testing|400x218](/img/user/6%20-%20Object/img/unnamed-1.jpg)
 
-![Untitled-4.jpg|400x372](/img/user/6%20-%20Object/img/Untitled-4.jpg)
+![unnamed-4.jpg|400x370](/img/user/6%20-%20Object/img/unnamed-4.jpg)
 - If you change: value, order, ASCII, data type — ANYTHING AT ALL → new test case. 
+> [!info]- original image
+> ![Untitled-4.jpg|400x372](/img/user/6%20-%20Object/img/Untitled-4.jpg)
+
 
 
 ![unnamed.jpg|400x370](/img/user/6%20-%20Object/img/unnamed.jpg)
