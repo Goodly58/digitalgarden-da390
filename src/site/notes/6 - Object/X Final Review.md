@@ -18,18 +18,12 @@ Hiding complex logic from user.
 ![image-6.png|400x129](/img/user/6%20-%20Object/img/image-6.png)
 Doesn't care about how calculateHealthIndex is calculated. Doctor just calls printDetails()
 
-**Cohesion**
+**Cohesion** (SERVE SINGLE PURPOSE?)
 ![image-7.png|400x230](/img/user/6%20-%20Object/img/image-7.png)
 High cohesion: single responsibility delegating the math calculation to calculateHealthIndex(). and calculateHealthIndex() doesn't print only returns result of formula.
 
-**Coupling**
-![image-8.png|400x250](/img/user/6%20-%20Object/img/image-8.png)
-
-**Steps of Software engineering**
-*Inception*: finding requirements and defining the project
-*Elaboration*: making the diagrams for the requirements like use case and class
-*Construction*: creating the code for ur system
-*Transition*: giving demos and submitting the final project
+**Coupling** (HOW MANY CLASSES BREAK IF I CHANGE?)
+![image-8.png|Here, you can see that "Billing_tight" will have an outdated formula if .calculateHealthIndex() formula changes.|400x250](/img/user/6%20-%20Object/img/image-8.png)
 
 
 #### Module 2 UML
@@ -78,13 +72,32 @@ High cohesion: single responsibility delegating the math calculation to calculat
 | ------------------- | ----------------------------------------------------------------------------------------------------- |
 | Functional          | What system does (system must allow ...)                                                              |
 | Non-functional      | Constraints/qualities:<br>- Performance (response time $<3$ s)<br>- Quality<br>- Safety<br>- Security |
+| Domain              | Special constraints from the business world” (Business rules, laws, standards)                        |
+
 
 # Midterm 2
 
+⭐
+![image-23.png|400x300](/img/user/6%20-%20Object/img/image-23.png)    
+    1. **Architectural Design** (after doing requirements to create component model)
+    2. **Interface Design** – how components talk to each other
+    3. **Detailed Design**
+	    - coding
+	    - class diagram
+		    - *Forward engineering*: diagram → code
+		    - *Reverse engineering*: code → diagram
+
+| Type                    | Simple idea                            | Example       |
+| ----------------------- | -------------------------------------- | ------------- |
+| **Interactive**         | User and system take turns             | ATM           |
+| **Event-Driven**        | System acts when something happens     | Sensor system |
+| **Transformational**    | Changes input into a new form          | Compiler      |
+| **Database**            | Keeps and finds lots of data           | Oracle DB     |
+| **Transaction based**   | Handles money/booking steps safely     | Banking app   |
+| **Data driven systems** | Uses data to choose or suggest actions | Recommender   |
+
+
 <span class="neon-highlight">Diagrams</span>
-
-![image-23.png|400x300](/img/user/6%20-%20Object/img/image-23.png)
-
 The SmartMed+ Remote Patient Monitoring System is a cloud-based healthcare solution developed to enable doctors to remotely monitor patients’ vital signs and respond quickly to emergencies. Each patient wears a SmartMed wearable device that continuously measures key health metrics such as heart rate, body temperature, and glucose levels. This device communicates via Bluetooth with a Mobile Gateway, typically the patient’s smartphone running the SmartMed Mobile App. The app encrypts and transmits the collected data through HTTPS to the Cloud Health Server, which hosts the SmartMed+ application and provides core functionalities such as health data storage, AI-driven anomaly detection, and alert notifications. The Cloud Server connects to a Database Server through a JDBC connection to store patient records, system logs, and doctor feedback. Doctors access the system through their Workstations or browser-based interfaces linked to the Cloud Server, while a System Administrator operates through an Admin Console Node to configure accounts, maintain data security, and monitor network operations.
 
 *Tasks*
@@ -102,11 +115,14 @@ Develop a Sequence Diagram for the same use case, showing the chronological flow
 > ![image-25.png|400x207](/img/user/6%20-%20Object/img/image-25.png)
 > ![image-26.png|400x192](/img/user/6%20-%20Object/img/image-26.png)
 
+**Component Diagram**
+![image-43.png|300](/img/user/6%20-%20Object/img/image-43.png)
 
-<span class="neon-highlight">Architectural Patterns</span>
+<span class="neon-highlight">Architectural Patterns</span> ⭐
 
 Draw all the Architectural Patterns
 > [!success]- Solution
+> ![image-41.png|400x322](/img/user/6%20-%20Object/img/image-41.png)
 > 
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/6-object/architectural-patterns/" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
 
@@ -199,10 +215,9 @@ Draw all the Architectural Patterns
 
 # Post-M2
 
-<span class="neon-highlight">DESIGN PATTERNS</span>
+<span class="neon-highlight">DESIGN PATTERNS</span> ⭐
 
-Link:
-[[6 - Object/Design Patterns\|Design Patterns]]
+Link: [[6 - Object/Design Patterns\|Design Patterns]]
 
 Draw all the design patterns
 > [!success]- Solution
@@ -211,41 +226,125 @@ Draw all the design patterns
 > **BEHAVIORAL**: Observer, Iterator
 > 
 
-<span class="neon-highlight">TESTING</span>
-
+<span class="neon-highlight">TESTING</span> ⭐
 Mapping input → output
 
-Three types of testing:
-1. Development testing
-2. Release testing
-3. User testing
+![unnamed-1.jpg|3 types of testing|400x218](/img/user/6%20-%20Object/img/unnamed-1.jpg)
 
 ![Untitled-4.jpg|400x372](/img/user/6%20-%20Object/img/Untitled-4.jpg)
 - If you change: value, order, ASCII, data type — ANYTHING AT ALL → new test case. 
 
 
-<span class="neon-highlight">Agile</span>
-RDCT: Requirement Designing Coding Testing Maintenance
+![unnamed.jpg|400x370](/img/user/6%20-%20Object/img/unnamed.jpg)
 
-Software development process model 
+> [!example]- Code
+> ```cpp
+> public class AverageTest {
+>     // Function to compute average
+>     public static double average(int a, int b, int c) {
+>         long sum = (long) a + b + c;  // avoid overflow
+>         return sum / 3.0;
+>     }
+> 
+>     // Modified assertEquals: prints result instead of throwing exception
+>     private static void assertEquals(double expected, double actual, String testName) {
+>         if (expected == actual) {
+>             System.out.println(testName + " passed.");
+>         } else {
+>             System.out.println(testName + " failed: expected " + expected + " but got " + actual);
+>         }
+>     }
+> 
+>     public static void main(String[] args) {
+> 
+>         // Test cases
+>         assertEquals(3.0, average(1, 2, 3), "Test 1: all positive");
+>         assertEquals(0.0, average(0, 0, 0), "Test 2: all zeros");
+>         assertEquals(-5.0, average(-4, -5, -6), "Test 3: all negative");
+>         assertEquals(200000.0, average(100000, 200000, 300000), "Test 4: large integer values");
+> 
+>         System.out.println("All tests executed.");
+>     }
+> }
+> ```
+
+![unnamed-3.jpg|400x218](/img/user/6%20-%20Object/img/unnamed-3.jpg)
+
+> [!example]- Code
+> ```cpp
+> public class ReverseStringSimple {
+>     public static String reverse(String s) {
+>         if (s == null) return null;
+>         return new StringBuilder(s).reverse().toString();
+>     }
+> 
+>     // Modified assertions: print result instead of throwing
+>     private static void assertEquals(String testName, String expected, String actual) {
+>         if (expected.equals(actual)) {
+>             System.out.println(testName + " passed.");
+>         } else {
+>             System.out.println(testName + " failed: expected \"" + expected + "\", got \"" + actual + "\"");
+>         }
+>     }
+> 
+>     private static void assertTrue(String testName, boolean condition) {
+>         if (condition) {
+>             System.out.println(testName + " passed.");
+>         } else {
+>             System.out.println(testName + " failed: condition is false");
+>         }
+>     }
+> 
+>     private static void assertNotNull(String testName, Object obj) {
+>         if (obj != null) {
+>             System.out.println(testName + " passed.");
+>         } else {
+>             System.out.println(testName + " failed: object is null");
+>         }
+>     }
+> 
+>     private static void assertNull(String testName, Object obj) {
+>         if (obj == null) {
+>             System.out.println(testName + " passed.");
+>         } else {
+>             System.out.println(testName + " failed: object is not null");
+>         }
+>     }
+> 
+>     public static void main(String[] args) {
+>         String str = "abcdefg";
+> 
+>         // All tests will run regardless of pass/fail
+>         assertEquals("Test 1: reverse content", "gf", reverse(str)); // this will fail
+>         assertTrue("Test 2: first character check", reverse(str).charAt(0) == 'g');
+>         assertNotNull("Test 3: not null check", reverse(str));
+>         assertNull("Test 4: null input check", reverse(null));
+>         assertTrue("Test 5: length check", reverse(str).length() == 7);
+> 
+>         System.out.println("All tests executed.");
+>     }
+> }
+> ```
+
+
+
+<span class="neon-highlight">RDCT</span> ⭐
+![unnamed-1-1.jpg|400x218](/img/user/6%20-%20Object/img/unnamed-1-1.jpg)
+
+<span class="neon-highlight">Software development process model </span> ⭐
 1. plan-driven (waterfall)
 2. incremental (agile)
-	1. SCRUM → 
-	2. XP (Extreme Programming) → finish software as fast as possible ![image-39.png|highest priority task should be implemented first|400x196](/img/user/6%20-%20Object/img/image-39.png)
-	3. Pair Programming
-3. Rational Unified Processing model (configuration & integration)
-	Phases (midterm 1):
-	1. Inception → project idea, scope
-	2. Elaboration → requirement analysis
-	3. Construction → design + coding + testing
-	4. Transition → deployment + delivering
-
+	1. XP (Extreme Programming) → finish software as fast as possible ![image-39.png|highest priority task should be implemented first|400x196](/img/user/6%20-%20Object/img/image-39.png)	practices:
+			- Code **refactoring**: cleaning code.
+			- Small frequent releases
+			- test-first development
+	
+3. Rational Unified Processing model
+	![image-44.png|i.e. steps of software engineering (midterm 1) |400x148](/img/user/6%20-%20Object/img/image-44.png)
+	
 ![Untitled-5.jpg|400x533](/img/user/6%20-%20Object/img/Untitled-5.jpg)
-
-
-
-Agile: rapid development, rapid collection of feedback
-plan-driven: slower development, slower collection of feedback
+**Agile**: rapid development, rapid collection of feedback. Phases can overlap *(Sprint 1 could have 20% R and 20% D)*
+**Plan-driven**: slower development, slower collection of feedback
 
 NASA, medical, or other critical time software (large size software) are water-fall or agile?
 > [!success]- Solution
@@ -260,6 +359,11 @@ SDLC: What is the most critical phase?
 > [!success]- Solution
 > The most critical phase is requirement. It is written in natural language and thus there can be confusion between the requirement team and the design team. 
 
+
+<span class="neon-highlight">Test-driven development</span>
+Number of test cases:$2^{number of input}$
+
+
 ---
 
 # Final Hints
@@ -268,4 +372,4 @@ In final exam (comprehensive):
 2. Give you source code, based on that what is the closest design pattern.
 3. (Code is for design patterns and code for abstraction, encapsulation, etc.)
 
-1 theoretical question (likely m2)
+1 theoretical question (likely post-m2)
