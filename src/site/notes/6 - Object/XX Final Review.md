@@ -23,7 +23,7 @@ Doesn't care about how calculateHealthIndex is calculated. Doctor just calls pri
 High cohesion: single responsibility delegating the math calculation to calculateHealthIndex(). and calculateHealthIndex() doesn't print only returns result of formula.
 
 **Coupling** (HOW MANY CLASSES BREAK IF I CHANGE?)
-![image-8.png|Here, you can see that "Billing_tight" will have an outdated formula if .calculateHealthIndex() formula changes.|400x250](/img/user/6%20-%20Object/img/image-8.png)
+![image-8.png|Here, you can see that Billing_tight will have an outdated formula if .calculateHealthIndex() formula changes.|400x250](/img/user/6%20-%20Object/img/image-8.png)
 
 
 #### Module 2 UML
