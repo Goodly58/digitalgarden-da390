@@ -62,8 +62,7 @@
 **Components:**
 - **Model:** Manages data & logic.
 - **View:** Presents UI to user.
-- **Controller:** Handles input & coordina> [!success]- Solution
-> tes Model ↔ View.
+- **Controller:** Handles input & coordinates Model ↔ View.
 
 ![MVC-Architecture.webp|400](/img/user/6%20-%20Object/img/MVC-Architecture.webp)
 
@@ -76,3 +75,9 @@
 4️⃣ View refreshes display
 
 ---
+
+### Repository, Data-driven Systems
+
+- Central **repository** acts as a shared data source.
+- Multiple **components** (agents, services) access the repository to store, retrieve, and process data.
+
