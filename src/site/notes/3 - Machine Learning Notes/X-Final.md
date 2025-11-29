@@ -65,7 +65,7 @@ Keep if $\text{err}_{\text{gen}}(\text{after}) < \text{err}_{\text{gen}}(\text{b
 | Moderate model   | ⚖️ Balanced | ⚖️ Balanced | Good generalization |
 
 Practice:
-[[3 - Machine Learning Notes/Previous Midterm\|Previous Midterm]]
+Previous Midterm
 
 # Final
 
