@@ -142,7 +142,7 @@ d) High for just one cluster?
 > [!success]- Solution
 > ![image-150.png|400x485](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-150.png)
 
-
+![image-154.png|400x258](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-154.png)
 > [!success]- Solution
 > ![image-152.png|400x251](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-152.png)
 > ![image-153.png|400x303](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-153.png)
