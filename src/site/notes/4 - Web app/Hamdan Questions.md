@@ -110,11 +110,10 @@ d) SELECT f.firstName, d.depName FROM faculty f LEFT JOIN department d ON f.depN
 > - WHERE salary BETWEEN 75000 AND 95000
 > - ORDER BY lastName DESC
 > - depName IN ('CMP', 'COE', 'CVE')
-> - SELECT depName, AVG(salary) FROM faculty GROUP BY depName HAVING salary > 80000
+> - SELECT depName, AVG(salary) FROM faculty GROUP BY depName HAVING AVG(salary) > 80000
 > - SELECT f.firstName, d.depName FROM faculty f INNER JOIN department d ON f.depName = d.depName
 
 **Database Concepts and Relationships (Multiple Choice)**
-Primary Keys and Foreign Keys
 20. What is the primary purpose of a Primary Key (PK) in a database table?
 a) To link two tables together in a Many-to-Many relationship.
 b) To ensure that all rows have NOT NULL values.
@@ -146,58 +145,181 @@ a) By placing a Foreign Key in the Student table that points to the Course table
 b) By placing a Foreign Key in the Course table that points to the Student table.
 c) By allowing multiple Primary Keys in both tables.
 d) By creating a third, intermediate/junction table that contains Foreign Keys to both Student and Course tables.
-26. Write the SQL Command That Defines Keys and Relationships (Free Response) - Questions
+
+> [!success]- Solution
+> c) common value
+> b)
+> b)
+> b)
+> b)
+> d)
+
+**Write the SQL Command That Defines Keys and Relationships (Free Response)**
 Write the complete SQL command to perform the requested Data Definition Language (DDL) function.
-27. Objective: Define Primary Key
+
 Write the SQL command to create a table named Department with a column depID (INT) which is defined as the table's Primary Key.
-28. Objective: Define Foreign Key
+
+> [!success]- Solution
+> CREATE TABLE department (
+> 	depID int PRIMARY KEY
+> 	);
+
 Write the SQL command to create a table named Faculty with a column depID (INT) that acts as a Foreign Key referencing the depID column in the Department table (as defined above). Assume facultyID is the Primary Key.
-29. Objective: Define Intermediate Table (M:M)
+
+> [!success]- Solution
+> CREATE TABLE Faculty (
+> depID INT,
+> facultyID INT PRIMARY KEY,
+> FOREIGN KEY (depID) REFERENCES Department(depID)
+> );
+
 Write the SQL command to create a junction table named Student_Course to resolve a Many-to-Many relationship between a Student table (studentID is PK) and a Course table (courseID is PK). This table should have studentID and courseID as its Foreign Keys, with the combination of both forming its Primary Key.
 
+> [!success]- Solution
+> CREATE TABLE Student_Course (
+> 	StudentID INT,
+> 	courseID INT,
+> 	PRIMARY KEY (StudentID, courseID),
+> 
+> 	FOREIGN KEY (StudentID) REFERENCES Student(studentID),
+> 	FOREIGN KEY (courseID) REFERENCES Course(courseID)
+> );
 
 # Servlets:
 Do lab servlets labs by hand lab 10
 Java:
-￼
+
+Given index.html:
+
+<!DOCTYPE html>
+<html>
+<head><title>Scout Registration</title></head>
+<body>
+  <h2>Join the Survey Corps</h2>
+  <form action="ScoutServlet" method="post">
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Rank:</label>
+    <select name="rank">
+      <option value="Trainee">Trainee</option>
+      <option value="Scout">Scout</option>
+      <option value="Squad Leader">Squad Leader</option>
+    </select><br><br>
+
+    <label>Specialty:</label>
+    <input type="text" name="specialty" required><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
+
+
+
 Past quiz:
 UML CLASS
-\
-Questions from professors description 
-30. Composite Primary Key (Table-Level Definition)
+
+![WhatsApp Image 2025-12-02 at 17.41.46_a8ab7490.jpg|400x171](/img/user/4%20-%20Web%20app/img/WhatsApp%20Image%202025-12-02%20at%2017.41.46_a8ab7490.jpg)
+![WhatsApp Image 2025-12-02 at 17.40.15_11fd02ba.jpg|400x693](/img/user/4%20-%20Web%20app/img/WhatsApp%20Image%202025-12-02%20at%2017.40.15_11fd02ba.jpg)
+
+> [!success]- Solution
+> B
+> D
+
+![WhatsApp Image 2025-12-02 at 17.40.15_90a3a755.jpg|400x456](/img/user/4%20-%20Web%20app/img/WhatsApp%20Image%202025-12-02%20at%2017.40.15_90a3a755.jpg)
+> [!success]- Solution
+> C
+> B
+
+![WhatsApp Image 2025-12-02 at 17.40.16_556220d9.jpg|400x477](/img/user/4%20-%20Web%20app/img/WhatsApp%20Image%202025-12-02%20at%2017.40.16_556220d9.jpg)
+
+> [!success]- Solution
+> C
+> C
+
+![WhatsApp Image 2025-12-02 at 17.40.16_4e9caf66.jpg|400x573](/img/user/4%20-%20Web%20app/img/WhatsApp%20Image%202025-12-02%20at%2017.40.16_4e9caf66.jpg)
+
+> [!success]- Solution
+> A
+> C
+> C
+
+
+# SQL Exam Questions
+
+### 30. Composite Primary Key (Table-Level Definition)
 Which SQL command correctly creates a StudentMajor table where the combination of studentID and majorID must be unique and serve as the Composite Primary Key?
-31. a) CREATE TABLE StudentMajor (studentID INT PRIMARY KEY, majorID INT PRIMARY KEY);
-b) CREATE TABLE StudentMajor (studentID INT, majorID INT, PRIMARY KEY (studentID), PRIMARY KEY (majorID));
-c) CREATE TABLE StudentMajor (studentID INT UNIQUE, majorID INT UNIQUE, PRIMARY KEY (studentID));
-d) CREATE TABLE StudentMajor (studentID INT, majorID INT, PRIMARY KEY (studentID, majorID));
-32. DDL Condition (CHECK Constraint)
+
+- a) `CREATE TABLE StudentMajor (studentID INT PRIMARY KEY, majorID INT PRIMARY KEY);`
+- b) `CREATE TABLE StudentMajor (studentID INT, majorID INT, PRIMARY KEY (studentID), PRIMARY KEY (majorID));`
+- c) `CREATE TABLE StudentMajor (studentID INT UNIQUE, majorID INT UNIQUE, PRIMARY KEY (studentID));`
+- d) `CREATE TABLE StudentMajor (studentID INT, majorID INT, PRIMARY KEY (studentID, majorID));`
+
+> [!success]- Solution
+> d
+
+---
+
+### 32. DDL Condition (CHECK Constraint)
 You are creating a BookLoan table to track borrowings. Which DDL statement correctly defines the constraint that ensures the returnDate is always a later date than the borrowDate?
-33. a) ALTER TABLE BookLoan ADD CHECK (returnDate > borrowingDate);
-b) CREATE TABLE BookLoan (..., returnDate DATE, borrowDate DATE, CHECK (borrowDate < returnDate) AT TABLE LEVEL);
-c) CREATE TABLE BookLoan (..., PRIMARY KEY (borrowDate, returnDate));
-d) CREATE TABLE BookLoan (borrowDate DATE, returnDate DATE, CHECK (returnDate > borrowDate));
-34. Joins and Output (Outer Join Logic)
+
+- a) `ALTER TABLE BookLoan ADD CHECK (returnDate > borrowingDate);`
+- b) `CREATE TABLE BookLoan (..., returnDate DATE, borrowDate DATE, CHECK (borrowDate < returnDate) AT TABLE LEVEL);`
+- c) `CREATE TABLE BookLoan (..., PRIMARY KEY (borrowDate, returnDate));`
+- d) `CREATE TABLE BookLoan (borrowDate DATE, returnDate DATE, CHECK (returnDate > borrowDate));`
+
+> [!success]- Solution
+> D
+
+---
+
+### 34. Joins and Output (Outer Join Logic)
 Given a Faculty table and a Department table, you execute a join query and observe the output includes several faculty records that have a NULL value in the depName column (which comes from the Department table). Which type of join was most likely used?
-35. a) INNER JOIN
-b) CROSS JOIN
-c) LEFT OUTER JOIN (with Faculty as the left table)
-d) RIGHT OUTER JOIN (with Faculty as the right table)
-36. Self-Join and Condition
+
+- a) INNER JOIN
+- b) CROSS JOIN
+- c) LEFT OUTER JOIN (with Faculty as the left table)
+- d) RIGHT OUTER JOIN (with Faculty as the right table)
+
+> [!success]- Solution
+> c
+
+---
+
+### 36. Self-Join and Condition
 To find two different faculty members who share the same last name, which condition must be included in the WHERE clause of a SELF JOIN (where f1 and f2 are aliases for the faculty table)?
-37. a) f1.lastName = f2.lastName OR f1.ID <> f2.ID
-b) f1.lastName = f2.lastName AND f1.ID = f2.ID
-c) f1.lastName = f2.lastName AND f1.ID <> f2.ID
-d) f1.lastName IS NOT NULL
-38. SQL Wildcards (LIKE Operator)
+
+- a) `f1.lastName = f2.lastName OR f1.ID <> f2.ID`
+- b) `f1.lastName = f2.lastName AND f1.ID = f2.ID`
+- c) `f1.lastName = f2.lastName AND f1.ID <> f2.ID`
+- d) `f1.lastName IS NOT NULL`
+
+> [!success]- Solution
+> c
+
+---
+
+### 38. SQL Wildcards (LIKE Operator)
 You want to retrieve records from the faculty table where the lastName has exactly two characters followed by "on", followed by zero or more characters. Which LIKE pattern is correct?
-39. a) LIKE 'on%'
-b) LIKE '%on'
-c) LIKE '\_on%'
-d) LIKE 'on%'
-40. Multi-Column Sorting (ORDER BY)
+
+- a) `LIKE 'on%'`
+- b) `LIKE '%on'`
+- c) `LIKE '__on%'`
+- d) `LIKE 'on%'`
+
+> [!success]- Solution
+> c
+
+---
+
+### 40. Multi-Column Sorting (ORDER BY)
 Which query correctly sorts the results, first by lastName in ascending order, and then, for ties in lastName, by salary in descending order?
-41. a) SELECT * FROM faculty ORDER BY salary DESC, lastName ASC;
-b) SELECT * FROM faculty ORDER BY lastName, salary;
-c) SELECT * FROM faculty ORDER BY lastName DESC, salary ASC;
-d) SELECT * FROM faculty ORDER BY lastName ASC, salary DESC;
-￼
+
+- a) `SELECT * FROM faculty ORDER BY salary DESC, lastName ASC;`
+- b) `SELECT * FROM faculty ORDER BY lastName, salary;`
+- c) `SELECT * FROM faculty ORDER BY lastName DESC, salary ASC;`
+- d) `SELECT * FROM faculty ORDER BY lastName ASC, salary DESC;`
+
+> [!success]- Solution
+> D
