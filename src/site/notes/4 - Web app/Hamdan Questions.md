@@ -32,13 +32,18 @@ Write the SQL command to calculate the average salary for faculty in each depart
 
 Assuming you have a faculty table (alias f) with column depName and a department table (alias d) with column depName, write the SQL command using an implicit join (comma in FROM) to select the firstName and the full depName for all matching records.
 
-> [!success]- Solution
+> [!success]- Implicit version
+> SELECT f.firstName, d.depName
+FROM faculty f, department d
+WHERE f.depName = d.depName;
+
+> [!success]- Explicit Version
 > SELECT f.firstName, d.depName
 > FROM Faculty
 > INNER JOIN department d;
 > ON f.depName = d.depName;
 
-7. Which SQL Command Does a Certain Function (Multiple Choice)
+**Which SQL Command Does a Certain Function (Multiple Choice)**
 Choose the best answer for each question.
 8. Which SQL command is used to permanently remove an entire table from the database structure?
 a) DELETE
@@ -65,7 +70,15 @@ a) Using a CROSS JOIN.
 b) Using the DISTINCT keyword.
 c) Using table prefixes (e.g., table.column) or aliases (e.g., t.column).
 d) Removing the WHERE clause.
-13. Give a List A B C D of Commands and One of Them is Correct (Multiple Choice - Command Selection)
+
+> [!success]- Solution
+> - DROP TABLE
+> - ORDER BY
+> - UNIQUE
+> - MAX()
+> - Using table prefixes
+
+**Give a List A B C D of Commands and One of Them is Correct (Multiple Choice - Command Selection)**
 Select the option that contains the single, correct SQL command to achieve the stated objective.
 14. Which SQL command correctly selects the firstName and lastName of faculty whose salary is between 75000 and 95000 (inclusive)?
 a) SELECT firstName, lastName FROM faculty WHERE salary > 75000 AND salary < 95000;
@@ -92,7 +105,15 @@ a) SELECT f.firstName, d.depName FROM faculty f, department d;
 b) SELECT f.firstName, d.depName FROM faculty f INNER JOIN department d ON f.depName = d.depName;
 c) SELECT f.firstName, d.depName FROM faculty f WHERE f.depName = d.depName;
 d) SELECT f.firstName, d.depName FROM faculty f LEFT JOIN department d ON f.depName = d.depName;
-19. Database Concepts and Relationships (Multiple Choice)
+
+> [!success]- Solution
+> - WHERE salary BETWEEN 75000 AND 95000
+> - ORDER BY lastName DESC
+> - depName IN ('CMP', 'COE', 'CVE')
+> - SELECT depName, AVG(salary) FROM faculty GROUP BY depName HAVING salary > 80000
+> - SELECT f.firstName, d.depName FROM faculty f INNER JOIN department d ON f.depName = d.depName
+
+**Database Concepts and Relationships (Multiple Choice)**
 Primary Keys and Foreign Keys
 20. What is the primary purpose of a Primary Key (PK) in a database table?
 a) To link two tables together in a Many-to-Many relationship.
