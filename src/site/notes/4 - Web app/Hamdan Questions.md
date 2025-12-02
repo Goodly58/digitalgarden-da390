@@ -34,8 +34,9 @@ Assuming you have a faculty table (alias f) with column depName and a department
 
 > [!success]- Solution
 > SELECT f.firstName, d.depName
-> FROM Faculty, Department
-> WHERE f.depName = d.depName;
+> FROM Faculty
+> INNER JOIN department d;
+> ON f.depName = d.depName;
 
 7. Which SQL Command Does a Certain Function (Multiple Choice)
 Choose the best answer for each question.
@@ -168,10 +169,10 @@ c) f1.lastName = f2.lastName AND f1.ID <> f2.ID
 d) f1.lastName IS NOT NULL
 38. SQL Wildcards (LIKE Operator)
 You want to retrieve records from the faculty table where the lastName has exactly two characters followed by "on", followed by zero or more characters. Which LIKE pattern is correct?
-39. a) LIKE '__on%'
-b) LIKE '%on__'
-c) LIKE '_on%'
-d) LIKE '__on%'
+39. a) LIKE 'on%'
+b) LIKE '%on'
+c) LIKE '\_on%'
+d) LIKE 'on%'
 40. Multi-Column Sorting (ORDER BY)
 Which query correctly sorts the results, first by lastName in ascending order, and then, for ties in lastName, by salary in descending order?
 41. a) SELECT * FROM faculty ORDER BY salary DESC, lastName ASC;
