@@ -193,4 +193,25 @@ A team from AUS proposed a method to predict whether an email is Spam or Not Spa
 
 ![image-239.png|400x471](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-239.png)
 
+> [!success]- Solution
+> ![image-242.png|400x299](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-242.png)
+> by better generalizing, I'm referring to a larger margin
 
+![image-240.png|400x270](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-240.png)
+b. naive bayes
+c. decision tree
+
+> [!success]- Solution
+> ![image-243.png|400x267](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-243.png)
+
+![image-241.png|400x400](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-241.png)
+
+
+> [!success]- Solution
+> a)
+> ![Untitled-1.png|400x315](/img/user/3%20-%20Machine%20Learning%20Notes/img/Untitled-1.png)
+> ![Untitled.png|400x330](/img/user/3%20-%20Machine%20Learning%20Notes/img/Untitled.png)
+> 
+> yes (support vector affecting margin boundary and thus affecting decision boundary)
+> b)
+> no (not a support vector, and not affecting margin boundary)
