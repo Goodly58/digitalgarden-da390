@@ -64,8 +64,6 @@ Keep if $\text{err}_{\text{gen}}(\text{after}) < \text{err}_{\text{gen}}(\text{b
 | Complex model    | 🔻 Low      | 🔺 High     | Overfitting         |
 | Moderate model   | ⚖️ Balanced | ⚖️ Balanced | Good generalization |
 
-Practice:
-Previous Midterm
 
 # Final
 
@@ -136,7 +134,14 @@ b) Low for just one cluster?
 c) High for all clusters?
 d) High for just one cluster?
 > [!success]- Solution
-> ![image-149.png|400x329](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-149.png)
+**a) the SSE for one variable is low for all clusters?**
+For each cluster, from each point to the centroid is close (they are all compact). This means that this specific attribute is useful.
+**b) Low for just one cluster?**
+That specific cluster has each point tightly close to the centroid. Despite other clusters being loose.
+**c) High for all clusters?**
+Each point in the cluster is far from the centroid in that specific cluster. Likely, there is a lot of noise in the dataset or k is too low.
+**d) High for just one cluster?**
+There is a high amount of spread for this cluster, or likely it contains a lot of outliers.
 
 ![image-151.png|400x294](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-151.png)
 > [!success]- Solution
@@ -159,6 +164,8 @@ Find textbook problems for concepts that aren't included in the practice problem
 - Clustering
 
 
+
+
 <span class="neon-highlight">Clustering</span>
 
 | **Metric** | **Type**     | **Measures**                                                   | **Good Result**              |
@@ -176,3 +183,28 @@ SSE+SSB=TSS (Total Sum of Squares), which is the max possible score for either m
 > SSE=0
 > SSB=15
 
+---
+
+Practice (from newest to oldest):
+1. [[3 - Machine Learning Notes/Previous Midterm (2025)\|Previous Midterm (2025)]]
+2. [[3 - Machine Learning Notes/Previous Midterm (OLD)\|Previous Midterm (OLD)]] ✅
+3. [[3 - Machine Learning Notes/Previous Quizzes\|Previous Quizzes]] ✅                            ← 1D dataset k-means
+4. HW 4
+5. [[3 - Machine Learning Notes/HWs 1-3 (Midterm Version)\|HWs 1-3 (Midterm Version)]] {OPTIONAL}
+6. [[3 - Machine Learning Notes/Thani's ML Final\|Thani's ML Final]]
+
+Post-Midterm Concepts:
+1. Bias-Variance Tradeoff
+2. Naive Bayes ✅
+3. SVM ✅
+4. Regression
+	1. Ordinary Least Squares ✅
+	2. Gradient Descent
+	3. Calculating SSE
+	4. $R^2$
+5. Regression II
+6. Clustering
+	1. Kmeans ✅
+	2. Kmeans ++
+	3. Bisecting Kmeans
+	4. DBSCAN 
