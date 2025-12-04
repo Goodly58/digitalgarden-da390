@@ -180,22 +180,26 @@ F. Assigning patients to “high risk / low risk” groups **based on a doctor�
 > [!success]- Solution
 > 
 
-![image-217.png|400x341](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-217.png)
+![image-228.png|400x458](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-228.png)
+
+
 
 
 3D dataset
 
-| Point | x  | y | z |
-| ----- | -- | - | - |
-| P1    | 0  | 0 | 0 |
-| P2    | 0  | 1 | 0 |
-| P3    | 5  | 5 | 5 |
-| P4    | 6  | 5 | 5 |
-| P5    | 10 | 0 | 0 |
-| P6    | 10 | 1 | 0 |
+| Point | x   | y   | z   |
+| ----- | --- | --- | --- |
+| P1    | 0   | 0   | 0   |
+| P2    | 0   | 1   | 0   |
+| P3    | 5   | 5   | 5   |
+| P4    | 6   | 5   | 5   |
+| P5    | 10  | 0   | 0   |
+| P6    | 10  | 1   | 0   |
 
 Use **bisecting k-means** to partition these 6 points into **K = 3 clusters**:
 
+> [!success]- Solution
+> ![image-237.png|400x502](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-237.png)
 
 **Question (multiple can be selected):**  
 In which of the following situations is **standard K-means likely to perform poorly** (i.e., this _is_ a problem for K-means)?
@@ -207,6 +211,13 @@ E. Features are on **very different scales** (e.g., one in meters, one in dollar
 F. Clusters are **spherical, similar size and density**, data is well-scaled, and there are **no outliers**.
 For each option, answer: **“Problem for K-means”** or **“Not a problem for K-means.”**
 
+> [!success]- Solution
+> A. problem (better for DBSCAN)
+> B. problem (better for DBSCAN)
+> C. problem (better for DBSCAN)
+> D. problem 
+> E. problem (needs scaling)
+> F. not problem
 
 # Clustering II
 
@@ -235,3 +246,7 @@ Would DBSCAN work here? why/why not?
 - How many **clusters** DBSCAN will find.
 - Which points belong to each cluster.
 - Which points are **noise**, if any.
+
+> [!success]- Solution
+> ![image-238.png|400x223](/img/user/3%20-%20Machine%20Learning%20Notes/img/image-238.png)
+
