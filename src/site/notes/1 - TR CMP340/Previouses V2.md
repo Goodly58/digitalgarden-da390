@@ -13,9 +13,33 @@
 - [[#November 24, 2025 (Quiz 3 — Source Vertex = 1)]]
 - [[#Final Exam]]
 
+## M1 Relevant Questions
+
+> Topics covered: sigma notation, time/space functions, growth orders (O/Ω/Θ), complexity tables, recursive algorithm analysis, binary search, pattern matching, selection/bubble/insertion/counting/radix/merge sort.
+
+- [[#September 16, 2025]] — recursive function tracing, time & space complexity `#M1`
+- [[#September 30, 2025 — First Exam (Session #1)]] — all 3 questions `#M1`
+  - Q1: Bubble sort + sigma
+  - Q2: Pattern matching + sigma (best/worst)
+  - Q3: Recursive call tree + complexity table
+- [[#September 30, 2025 — First Exam (Session #2)]] — all 3 questions `#M1`
+  - Q1: Binary search + complexity table
+  - Q2: Insertion sort + sigma (best case)
+  - Q3: Recursive call tree + complexity table
+- [[#October 20, 2025]] — Q1, Q2, Q3 only `#M1` (Q0 Heapify is NOT M1)
+  - Q1: Selection sort + sigma
+  - Q2: Mode finding (nested loops) + sigma
+  - Q3: Recursive Func(8) with n/2 — linearithmic complexity table
+- [[#Final Exam]] — Q1 only `#M1`
+  - Q1: Recursive g(n) with nested loops + two calls — complexity table
+
 ---
 
 #### September 16, 2025
+`#M1` — W2: recursive tracing, time & space complexity
+
+> [!Abstract]- Original Exam Paper
+> ![sep16.png|500](/img/user/1%20-%20TR%20CMP340/img/sep16.png)
 
 **Given the following recursive function. Answer the following questions.**
 
@@ -40,6 +64,10 @@ e. Explain the space complexity of the function in the worst and best cases.
 ---
 
 #### September 30, 2025 — First Exam (Session #1)
+`#M1` — W3_II, W4: bubble sort, pattern matching, recursive call tree
+
+> [!Abstract]- Original Exam Paper
+> *Source: RTF text file — no scanned image available.*
 
 **Q1.** (8 points) Show the execution of the algorithm on the array **A [7,3,9,2]** with **n=4**; track all variables, including the array. Calculate the running time using the sum operator (sigma).
 
@@ -85,6 +113,10 @@ int f(int n) {
 ---
 
 #### September 30, 2025 — First Exam (Session #2)
+`#M1` — W3_II, W4: binary search, insertion sort, recursive call tree
+
+> [!Abstract]- Original Exam Paper
+> *Source: RTF text file — no scanned image available.*
 
 **Q1.** (8 points) Show the execution of the algorithm (below) on the array **A [5,8,9,17,30,47,51]** with the initial call **BS(A,7,30)** (track all variables). Calculate the running time and space (stack size) using the complexity table.
 
@@ -132,8 +164,12 @@ int Func(int n) {
 ---
 
 #### October 20, 2025
+`#M1` partial — Q1, Q2, Q3 are M1. Q0 (Heapify) is NOT M1.
 
-**Q0.** **Apply Heapify(A,4,0) (defined below) to the array A [3,9,2,6] and respond to the following.** In a tree view, show all calls made for both **Heapify** and **siftdown**. In each call, show the changes of the local parameters (**i, left, and right**) and the swaps done on the array.
+**Q0.** ⚠️ *NOT M1 — Heapify is beyond W1–W4 scope.* **Apply Heapify(A,4,0) (defined below) to the array A [3,9,2,6] and respond to the following.** In a tree view, show all calls made for both **Heapify** and **siftdown**. In each call, show the changes of the local parameters (**i, left, and right**) and the swaps done on the array.
+
+> [!Abstract]- Original Exam Paper (Oct 20 — Full)
+> ![oct20_q0_heapify.png|500](/img/user/1%20-%20TR%20CMP340/img/oct20_q0_heapify.png)
 
 ```cpp
 void siftdown(int A[], int n, int i) {
@@ -175,7 +211,10 @@ void Heapify(int A[], int n, int i) {
 }
 ```
 
-**Q1.** Show the execution of the algorithm (below) on the array **A [8,2,6,3]** with size **n=4**, track all variables, including the array. Calculate the time complexity of the algorithm using the sum operator (**sigma**).
+**Q1.** `#M1` — W4: selection sort + sigma. Show the execution of the algorithm (below) on the array **A [8,2,6,3]** with size **n=4**, track all variables, including the array. Calculate the time complexity of the algorithm using the sum operator (**sigma**).
+
+> [!Abstract]- Original Exam Paper (Q1)
+> ![oct20_q1_selection.png|500](/img/user/1%20-%20TR%20CMP340/img/oct20_q1_selection.png)
 
 ```cpp
 for (int i = 0; i < n; i++) {
@@ -189,7 +228,10 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-**Q2.** Track all variables in the execution of the algorithm on the list **[6,5,5,7]** with size **n=4**. Calculate the time using the sum operator (**sigma**). What is the impact on correctness & running time if we change the start value of **j** to **n-1**?
+**Q2.** `#M1` — W1: mode finding (nested loops) + sigma. Track all variables in the execution of the algorithm on the list **[6,5,5,7]** with size **n=4**. Calculate the time using the sum operator (**sigma**). What is the impact on correctness & running time if we change the start value of **j** to **n-1**?
+
+> [!Abstract]- Original Exam Paper (Q2)
+> ![oct20_q2_mode.png|500](/img/user/1%20-%20TR%20CMP340/img/oct20_q2_mode.png)
 
 ```cpp
 int mode = list[n - 1], freq = 1;
@@ -204,7 +246,10 @@ for (int i = n - 1; i > 0; i--) {
 }
 ```
 
-**Q3.** Demonstrate the execution of the following algorithm, where the initial call is **Func(8)**; track the calls, the local variables of each call, and show the returned value from each call. Prove the time and space complexity class of the algorithm using the complexity table method.
+**Q3.** `#M1` — W3: linearithmic recursive + complexity table. Demonstrate the execution of the following algorithm, where the initial call is **Func(8)**; track the calls, the local variables of each call, and show the returned value from each call. Prove the time and space complexity class of the algorithm using the complexity table method.
+
+> [!Abstract]- Original Exam Paper (Q3)
+> ![oct20_q3_func8.png|500](/img/user/1%20-%20TR%20CMP340/img/oct20_q3_func8.png)
 
 ```cpp
 int Func(int n) {
@@ -218,6 +263,10 @@ int Func(int n) {
 ---
 
 #### October 21, 2025
+⚠️ *NOT M1 — quicksort, BFS, transitive closure are beyond W1–W4 scope.*
+
+> [!Abstract]- Original Exam Paper (Oct 21 — Quicksort Q)
+> ![oct21_quicksort_7403.png|500](/img/user/1%20-%20TR%20CMP340/img/oct21_quicksort_7403.png)
 
 Apply the following quicksort algorithm to the array **A [7,4,0,3]** and respond to the following requirements. **What is the initial call to quicksort?** Show all calls to quicksort as a tree. Also, show the changes in local parameters for each call. Likewise, show the swaps in the array.
 
@@ -247,7 +296,10 @@ void quicksort(int l, int h, int A[]) {
 
 **Q1.** Show the execution of Breadth First Search (given below) on the input graph. Show the changes in all variables, including the entries for all structures. Start tracking the changes within the highlighted segment. **What changes to the program below are required to process disconnected graphs?**
 
-![imagep-1.png|400](/img/user/1%20-%20TR%20CMP340/img/imagep-1.png)
+> [!Abstract]- Original Exam Paper (Q1 — BFS)
+> ![oct21_q1_bfs.png|500](/img/user/1%20-%20TR%20CMP340/img/oct21_q1_bfs.png)
+
+![image-86.png|400x278](/img/user/1%20-%20TR%20CMP340/img/image-86.png)
 
 ```c++
 void bfs(vector<vector<int>> &graph, vector<int>& visited, vector<int>& queue) {
@@ -286,6 +338,9 @@ int main() {
 
 **Q2.** Show the execution of quicksort (given below) on the array **A [4,6,3,7]**. Show all function calls, including the first call to "quicksort", the values of the functions' parameters, the changes in the variables, and the changes in the array.
 
+> [!Abstract]- Original Exam Paper (Q2 — Quicksort [4,6,3,7])
+> ![oct21_q2_quicksort_4637.png|500](/img/user/1%20-%20TR%20CMP340/img/oct21_q2_quicksort_4637.png)
+
 ```c
 int partition(int l, int h, int A[]) {
     int pivot = A[l]; int i = l - 1, j = h + 1;
@@ -311,6 +366,9 @@ void quicksort(int l, int h, int A[]) {
 ```
 
 **Q3.** Show the execution of the transitive closure algorithm (given below) on the graph. Show all calls to dfs, the changes in the variables, including all structures. Start tracking the changes within the highlighted segment.
+
+> [!Abstract]- Original Exam Paper (Q3 — Transitive Closure)
+> ![oct21_q3_transitive.png|500](/img/user/1%20-%20TR%20CMP340/img/oct21_q3_transitive.png)
 
 ![imagep-2.png|400](/img/user/1%20-%20TR%20CMP340/img/imagep-2.png)
 
@@ -352,6 +410,12 @@ int main() {
 ---
 
 #### November 24, 2025 (Quiz 3 — Source Vertex = 2)
+⚠️ *NOT M1 — shortest path algorithm is beyond W1–W4 scope.*
+
+> [!Abstract]- Original Exam Paper (Nov 24 Quiz 3 — Source = 2)
+> ![nov24_source2_graph.png|500](/img/user/1%20-%20TR%20CMP340/img/nov24_source2_graph.png)
+> ![nov24_code_p1.png|500](/img/user/1%20-%20TR%20CMP340/img/nov24_code_p1.png)
+> ![nov24_code_p2.png|500](/img/user/1%20-%20TR%20CMP340/img/nov24_code_p2.png)
 
 **Show the execution of the shortest path finding algorithm (given on the next page) on the following graph.** Start tracking the execution from the highlighted segment. Track all recursive calls, call parameters, local variables, and data structures. **The source vertex is 2.**
 
@@ -437,6 +501,10 @@ void shortest(int C, int i,
 ---
 
 #### November 24, 2025 (Quiz 3 — Source Vertex = 1)
+⚠️ *NOT M1 — shortest path algorithm is beyond W1–W4 scope.*
+
+> [!Abstract]- Original Exam Paper (Nov 24 Quiz 3 — Source = 1)
+> ![nov24_source1_graph.png|500](/img/user/1%20-%20TR%20CMP340/img/nov24_source1_graph.png)
 
 **Show the execution of the shortest path finding algorithm (given on the next page) on the following graph.** Start tracking the execution from the highlighted segment. Track all recursive calls, call parameters, local variables, and data structures. **The source vertex is 1.**
 
@@ -447,8 +515,12 @@ _(Same algorithm code as the source=2 variant above.)_
 ---
 
 #### Final Exam
+`#M1` partial — Q1 only. Q2–Q4 (graph algorithms) are NOT M1.
 
-**Q1.** Calculate the time and space complexity of the following program using the complexity table.
+**Q1.** `#M1` — W3: exponential recursive with nested loops + complexity table. Calculate the time and space complexity of the following program using the complexity table.
+
+> [!Abstract]- Original Exam Paper (Final Q1)
+> ![final_q1.png|500](/img/user/1%20-%20TR%20CMP340/img/final_q1.png)
 
 ```cpp
 void g(int n) {
@@ -462,7 +534,11 @@ void g(int n) {
 int main() { int n; cin >> n; g(n); }
 ```
 
-**Q2.** Fill in the tables (on the next page) with the progress of recursive calls (and their arguments & returns), the values of local variables, and the data structures' content during the execution of the following minimum_spanning_tree finding program. Tracking the execution of the sort function is not required.
+**Q2.** ⚠️ *NOT M1 — Kruskal's MST.* Fill in the tables (on the next page) with the progress of recursive calls (and their arguments & returns), the values of local variables, and the data structures' content during the execution of the following minimum_spanning_tree finding program. Tracking the execution of the sort function is not required.
+
+> [!Abstract]- Original Exam Paper (Final Q2 — Kruskal's)
+> ![final_q2_code.png|500](/img/user/1%20-%20TR%20CMP340/img/final_q2_code.png)
+> ![final_q2_tables.png|500](/img/user/1%20-%20TR%20CMP340/img/final_q2_tables.png)
 
 ```cpp
 struct edge { int x, y, cost; };
@@ -533,7 +609,10 @@ _(See graph below — 5 vertices (0–4) with weighted undirected edges, and bla
 
 ![imagep-5.png|400](/img/user/1%20-%20TR%20CMP340/img/imagep-5.png)
 
-**Q3.** Fill in the tables (on the next page) with the progress of recursive calls (and their arguments & returns), the local variables, and the arrays during the execution of the following program on the flow network on the next page. **Source=0, terminal=4.**
+**Q3.** ⚠️ *NOT M1 — Flow network (balance/reduce).* Fill in the tables (on the next page) with the progress of recursive calls (and their arguments & returns), the local variables, and the arrays during the execution of the following program on the flow network on the next page. **Source=0, terminal=4.**
+
+> [!Abstract]- Original Exam Paper (Final Q3 — Flow Network)
+> ![final_q3_code.png|500](/img/user/1%20-%20TR%20CMP340/img/final_q3_code.png)
 
 ```cpp
 struct edge { int capacity; int flow; };
@@ -665,7 +744,10 @@ _(See flow network below — 5 vertices (0–4) with directed capacitated edges.
 
 ![imagep-7.png|400](/img/user/1%20-%20TR%20CMP340/img/imagep-7.png)
 
-**Q4.** Fill in the table with the progress of calls, their local variables during the execution of the following program running on the graph on the next page. Show the time and space complexity of the following program using the complexity table.
+**Q4.** ⚠️ *NOT M1 — Max independent set (graph algorithm).* Fill in the table with the progress of calls, their local variables during the execution of the following program running on the graph on the next page. Show the time and space complexity of the following program using the complexity table.
+
+> [!Abstract]- Original Exam Paper (Final Q4 — Max Independent Set)
+> ![final_q4_code.png|500](/img/user/1%20-%20TR%20CMP340/img/final_q4_code.png)
 
 ```cpp
 vector<int> sol;
