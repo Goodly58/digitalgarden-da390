@@ -2,6 +2,12 @@
 {"dg-publish":true,"permalink":"/1-tr-cmp-340/midterm-2-review/"}
 ---
 
+[[#W6 Quicksort, DFS, BFS]]
+[[#W7 Advanced string matching, Hashing, Heapsort]]
+
+
+# W6: Quicksort, DFS, BFS
+
 ### Quicksort
 ```cpp
 int partition(int l, int h, int A[]) {
@@ -164,3 +170,5 @@ BFS
 
 
 ![image-160.png|400x279](/img/user/1%20-%20TR%20CMP340/img/image-160.png)
+
+# W7: Advanced string matching, Hashing, Heapsort 
